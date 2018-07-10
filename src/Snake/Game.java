@@ -24,7 +24,8 @@ class Game {
         Group root = new Group();
         Scene gameScene = new Scene(root, blockSize *  gridWidth, blockSize * gridHeight);
         gameScene.setOnKeyPressed(event -> keyPressEvent(event.getCode()));
-        game.show();
+        game.setScene(gameScene);
+        game.showAndWait();
     }
     private void keyPressEvent(KeyCode code)
     {

@@ -13,7 +13,8 @@ public class Main extends Application
     }
     public void start(Stage primaryStage)
     {
-        primaryStage.setTitle("Snake");
+        //stage = primaryStage;
+        //primaryStage.setTitle("Snake");
         Game test = new Game();
         test.initGameWindow();
     }
