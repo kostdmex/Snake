@@ -6,15 +6,12 @@ import javafx.stage.Stage;
 
 public class Main extends Application
 {
-    private Stage stage;
     public static void main(String[] args)
     {
         launch(args);
     }
     public void start(Stage primaryStage)
     {
-        //stage = primaryStage;
-        //primaryStage.setTitle("Snake");
         Game test = new Game();
         test.initGameWindow();
     }

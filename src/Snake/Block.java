@@ -2,7 +2,7 @@ package Snake;
 
 import javafx.scene.paint.Color;
 
-public class Block {
+class Block {
     private int x, y;
     private Color color;
     Block(int tempX, int tempY, Color tempColor)
@@ -23,13 +23,13 @@ public class Block {
     {
         return color;
     }
-    int setX()
+    void setX(int tempX)
     {
-        return x;
+        x = tempX;
     }
-    int setY()
+    void setY(int tempY)
     {
-        return y;
+        y = tempY;
     }
     void setColor(Color tempColor)
     {
