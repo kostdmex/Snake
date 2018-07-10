@@ -88,12 +88,12 @@ class Game {
     private void drawSnake(GraphicsContext gc)
     {
         background(gc);
+        fd.drawFood(gc);
         gc.setFill(Color.GREEN);
         for(Block bk: snake)
         {
             gc.fillRoundRect(bk.getX(),bk.getY(),blockSize,blockSize,20,20);
         }
-        fd.drawFood(gc);
     }
     private void startGame(GraphicsContext gc)
     {
