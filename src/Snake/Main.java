@@ -1,18 +1,14 @@
 package Snake;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javax.xml.crypto.Data;
 
-public class Main extends Application
+public class Main
 {
     public static void main(String[] args)
     {
-        launch(args);
-    }
-    public void start(Stage primaryStage)
-    {
-        Game test = new Game();
-        test.initGameWindow();
+        Menu menu = new Menu();
+        menu.runMenu();
+        Database save = new Database();
+        save.writeData(UserList.getUsersList());
     }
 }
