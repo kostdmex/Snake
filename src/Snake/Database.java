@@ -22,8 +22,8 @@ class Database
         try {
             Scanner read = new Scanner(fileDatabase);
             while (read.hasNext()) {
-                record = Integer.parseInt(read.next());
                 name = read.next();
+                record = Integer.parseInt(read.next());
                 userList.add(new User(name, record));
             }
         } catch (IOException e) {
@@ -36,8 +36,8 @@ class Database
         try {
             PrintWriter out = new PrintWriter(new FileWriter(fileDatabase));
             for (int index = 0; index < userList.size(); index++) {
-                out.print(userList.get(index).getScore()+ " ");
                 out.print(userList.get(index).getName()+ " ");
+                out.print(userList.get(index).getScore()+ " ");
             }
             out.close();
         }

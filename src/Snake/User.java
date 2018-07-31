@@ -1,6 +1,6 @@
 package Snake;
 
-class User {
+public class User {
     private String name;
     private int score;
     User(String tempName, int tempScore)
@@ -8,14 +8,15 @@ class User {
         name = tempName;
         score = tempScore;
     }
-    String getName()
+    public String getName()
     {
         return name;
     }
-    int getScore()
+    public int getScore()
     {
         return score;
-    }void setScore(int newScore)
+    }
+    public void setScore(int newScore)
     {
         score = newScore;
     }

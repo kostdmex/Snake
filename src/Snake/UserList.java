@@ -14,9 +14,9 @@ import javafx.stage.Stage;
 
 import java.util.ArrayList;
 
-class UserList {
-    private static Database read = new Database();
-    static private ArrayList<User> list = new ArrayList<>(read.readData());
+public class UserList {
+    static Database data = new Database();
+    static private ArrayList<User> list = new ArrayList<>(data.readData());
     static void showUser(StringBuilder user)
     {
         if(list.size()>0)
@@ -28,7 +28,7 @@ class UserList {
             buildAddUserWindow(user);
         }
     }
-    private static void buildAddUserWindow(StringBuilder userStr)
+    static void buildAddUserWindow(StringBuilder userStr)
     {
         Stage addUser = new Stage();
         addUser.initModality(Modality.APPLICATION_MODAL);
@@ -65,7 +65,7 @@ class UserList {
         addUser.setScene(addUserScene);
         addUser.showAndWait();
     }
-    private static boolean checkName(User temp)
+    static boolean checkName(User temp)
     {
         if (temp.getName().equals("")) {
             return false;
@@ -78,7 +78,7 @@ class UserList {
         }
         return true;
     }
-    private static void errorWindow()
+    static void errorWindow()
     {
         Stage error = new Stage();
         error.initModality(Modality.APPLICATION_MODAL);

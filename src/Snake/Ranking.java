@@ -19,7 +19,6 @@ class Ranking
         Stage rankingWindow = new Stage();
         rankingWindow.initModality(Modality.APPLICATION_MODAL);
         rankingWindow.setTitle("Ranking");
-
         ObservableList<User> usersList = FXCollections.observableArrayList(users);
         Comparator<User> comparator = Comparator.comparingInt(User::getScore);
         comparator = comparator.reversed();
@@ -28,14 +27,14 @@ class Ranking
         TableView<User> rankingTable = new TableView<>();
         TableColumn<User, String> nameColumn = new TableColumn<>("Username");
         nameColumn.setMinWidth(200);
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("Name"));
 
         TableColumn<User, String> scoreColumn = new TableColumn<>("Record");
         scoreColumn.setMinWidth(150);
-        scoreColumn.setCellValueFactory(new PropertyValueFactory<>("score"));
-
-        rankingTable.setItems(usersList);
+        scoreColumn.setCellValueFactory(new PropertyValueFactory<>("Score"));
         rankingTable.getColumns().addAll(nameColumn, scoreColumn);
+        rankingTable.setItems(usersList);
+
 
         GridPane rankingLayout = new GridPane();
         rankingLayout.getChildren().add(rankingTable);
