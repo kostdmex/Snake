@@ -302,7 +302,7 @@ class Game {
             incTime = 0.15;
             incScore = 25;
         }
-        else if (difficult.equals("Fucked up mode"))
+        else if (difficult.equals("Hardcore mode"))
         {
             incTime = 0.2;
             incScore = 40;
